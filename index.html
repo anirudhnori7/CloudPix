@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.6/axios.min.js"
+            integrity="sha512-06NZg89vaTNvnFgFTqi/dJKFadQ6FIglD6Yg1HHWAUtVFFoXli9BZL4q4EO1UTKpOfCfW5ws2Z6gw49Swsilsg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <link rel="stylesheet" href="./frontend-js/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="outer">
+            <div class="outer_text">
+                <h1 class="outer_text_title">Welcome to CloudPix an image processing app!</h1>
+                <p class="outer_text_sub_title">
+                    <h3>Here you can filter,resize & grayscale images</h3>
+                    <h3>First it will transform image than store it in S3 bucket.</h3>
+                    <h3>Image transformation is executing on EC2 </h3>
+                    <h3>Delete function is coming from AWS Lambda function with api gateway.</h3>
+                </p>
+            </div>
+            <div class="outer_media">
+                <div class="media_input">
+                    <input type="file" class="custom-file-input" id="imgInput" accept="image/png, image/heic, image/jpeg, image/heif" />
+                </div>
+                <div class="media_button">
+                    <button class="media_btn" type="submit" id="resizeBtn">Resize</button>
+                    <button class="media_btn" type="submit" id="greyBtn">Grey</button>
+                    <button class="media_btn" type="submit" id="saturateBtn">Saturate</button>
+                    <button class="media_btn" type="submit" id="deleteBtn">Delete</button>
+                </div>
+                <img  style="height: 300px; width: 400px;" alt="" id="img" />
+            </div>
+        </div>
+    </body>
+    <script src="./frontend-js/index.js"></script>
+</html>
